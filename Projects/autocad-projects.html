@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Elmorsy | Home</title>
+    <!-- Main + Normalize + fontAwesome -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mohamed Elmorsy | AutoCAD Projects</title>
+    <style>
+      /****================================>Start Media & Container <================================*/
+      .container {
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      /* Mobile devices */
+      @media (min-width: 768px) {
+        .container {
+          width: 750px;
+        }
+      }
+
+      /* Medium devices */
+      @media (min-width: 992px) {
+        .container {
+          width: 970px;
+        }
+      }
+
+      /* Large devices */
+      @media (min-width: 1200px) {
+        .container {
+          width: 1170px;
+        }
+      }
+      /****================================>End Media & Container <================================*/
+      /****================================>Start Componant <================================*/
+
+      .heading-container {
+        text-align: center;
+      }
+      .stylish-heading {
+        font-size: 36px;
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        border-radius: 10px;
+        background: linear-gradient(45deg, #000000, #0006ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.4s ease, text-shadow 0.4s ease;
+      }
+
+      .stylish-heading:hover {
+        transform: scale(1.1);
+        text-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      }
+      /****================================>End Componant <================================*/
+      /* Gallery Section */
+      .gallery {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+        padding: 0 0 10px;
+      }
+
+      .gallery-item {
+        border: 1px solid #ccc;
+        padding: 0 0 15px;
+        text-align: center;
+        border-radius: 10px 10px 5px 5px;
+        overflow: hidden;
+      }
+
+      .gallery-image img {
+        width: 100%;
+        height: auto;
+      }
+
+      .gallery-content {
+        margin-top: 15px;
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .description {
+        font-size: 14px;
+        color: #666;
+        margin-top: 5px;
+      }
+
+      hr {
+        margin: 15px 0;
+        border: none;
+        border-top: 1px solid #ddd;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 8px 15px;
+        font-size: 14px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .youtube {
+        background-color: #ff0000;
+      }
+
+      .linkedin {
+        background-color: #0077b5;
+      }
+
+      /* Medium Screens */
+      @media screen and (max-width: 992px) {
+        .gallery {
+          grid-template-columns: repeat(
+            2,
+            1fr
+          ); /* 2 columns for medium screens */
+        }
+      }
+
+      /* Small Screens */
+      @media screen and (max-width: 768px) {
+        .gallery {
+          grid-template-columns: repeat(
+            1,
+            1fr
+          ); /* 1 column for small screens */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+        <!-- Start Header -->
+        <header id="myHeader">
+          <div class="container">
+            <a href="../index.html"><img class="logo" src="../image/logo.png" alt="" /></a>
+            <div class="links">
+              <div class="icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <ul class="sections">
+                <li>
+                  <a href="Projects/autocad-projects.html">Projects</a>
+                </li>
+                <li>
+                  <a href="#Portfolio">Portfolio</a>
+                </li>
+                <li>
+                  <a href="#About">About</a>
+                </li>
+                <li>
+                  <a href="#Contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <!-- End Header -->
+    <div class="heading-container">
+      <h1 class="stylish-heading">AutoCAD Courses</h1>
+    </div>
+    <div class="container">
+      <div class="gallery">
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="../Projects/thumbnails/project-1.png" alt="Image 1" />
+          </div>
+          <div class="gallery-content">
+            <h3 class="title">AutoCAD Basic Tutorial</h3>
+            <p class="description">
+              In just 30 minutes, you'll understand what AutoCAD is.
+            </p>
+            <hr />
+            <div class="buttons">
+              <a
+                href="https://www.youtube.com/playlist?list=PLoFJwdT3MvXwmWGpZxwxhp2yV_S8rqJZ3"
+                class="btn youtube"
+                >Watch on YouTube</a
+              >
+              <a
+                href="https://www.linkedin.com/in/mohamed-elmorsy-235345256/"
+                class="btn linkedin"
+                >Connect on LinkedIn</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Start Footer -->
+        <footer>
+          © 2025 All Right Reserved for
+          <a class="logo" href="#Linkedin"><img src="image/logo.png" alt="" /></a>
+        </footer>
+        <!-- End Footer -->
+        <!-- Start Sticky Header -->
+        <script>
+          window.onscroll = function () {
+            myFunction();
+          };
+    
+          var header = document.getElementById("myHeader");
+    
+          var sticky = header.offsetTop;
+    
+          function myFunction() {
+            if (window.scrollY > sticky) {
+              header.classList.add("sticky");
+            } else {
+              header.classList.remove("sticky");
+            }
+          }
+        </script>
+        <!-- End Sticky Header -->
+  </body>
+</html>

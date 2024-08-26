@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Elmorsy | Engineering Projects</title>
+    <link rel="icon" type="x-icon" href="image/logo.png" />
+    <!-- Main + Normalize + fontAwesome -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Start Main title */
+      .main-title {
+        text-transform: uppercase;
+        margin: 0 auto 80px;
+        border: 2px solid black;
+        padding: 10px 20px;
+        font-size: 30px;
+        width: fit-content;
+        position: relative;
+        z-index: 1;
+        transition: var(--main-transition);
+      }
+      .main-title::before,
+      .main-title::after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background-color: var(--main-color);
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .main-title::before {
+        left: -30px;
+      }
+      .main-title::after {
+        right: -30px;
+      }
+      .main-title:hover::before {
+        z-index: -1;
+        animation: left-move 0.5s linear forwards;
+      }
+      .main-title:hover::after {
+        z-index: -1;
+        animation: right-move 0.5s linear forwards;
+      }
+      .main-title:hover {
+        color: white;
+        border: 2px solid white;
+        transition-delay: 0.5s;
+      }
+      /* End Main title */
+      /* Start Services */
+      .services {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        background-color: #d5d5d5;
+      }
+      .services .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 40px;
+      }
+      .services .box {
+        background-color: white;
+        box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+        counter-increment: services;
+        transition: 0.3s;
+        position: relative;
+        text-align: center;
+      }
+      .services .box::before {
+        content: "";
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        top: -3px;
+        background-color: var(--main-color);
+        position: absolute;
+        width: 0;
+        transition: 0.3s;
+      }
+      .services .box:hover {
+        transform: translateY(-10px);
+      }
+      .services .box:hover::before {
+        width: 100%;
+      }
+      .services .box img{
+        height: 100px;
+      }
+      .services .box > i {
+        margin: 30px auto 20px;
+        display: block;
+        text-align: center;
+        color: #d5d5d5;
+      }
+      .services .box > h3 {
+        text-align: center;
+        margin: 20px 0 40px;
+        font-size: 25px;
+        color: var(--main-color);
+      }
+      .services .box .info {
+        padding: 15px;
+        position: relative;
+        background-color: #f9f9f9;
+        text-align: right;
+      }
+      .services .box .info::before {
+        content: "0" counter(services);
+        position: absolute;
+        background-color: var(--main-color);
+        color: white;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 80px;
+        font-size: 30px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 15px;
+      }
+      .services .box .info::after {
+        content: "";
+        position: absolute;
+        background-color: #d5d5d5;
+        top: 0;
+        left: 80px;
+        width: 50px;
+        height: calc(100% + 0.4px);
+        transform: skewX(-30deg);
+      }
+      .services .box .info a {
+        color: var(--main-color);
+      }
+      /* End Services */
+    </style>
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header id="myHeader">
+      <div class="container">
+        <a href="../index.html"
+          ><img class="logo" src="../image/logo.png" alt=""
+        /></a>
+        <div class="links">
+          <div class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="sections">
+            <li>
+              <a href="Projects/autocad-projects.html">Projects</a>
+            </li>
+            <li>
+              <a href="#Portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#About">About</a>
+            </li>
+            <li>
+              <a href="#Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Services -->
+    <div class="services" id="services">
+      <h2 class="main-title">Engineering Projects</h2>
+      <div class="container">
+        <div class="box">
+          <img src="icons/autocad.png" alt="">
+          <h3>AutoCAD Project</h3>
+          <div class="info">
+            <a href="/Projects/autocad-projects.html">Details</a>
+          </div>
+        </div>
+        <div class="box">
+            <img src="icons/revit.png" alt="">
+            <h3>Revit Project</h3>
+            <div class="info">
+              <a href="/Projects/revit-projects.html">Details</a>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- End Services -->
+    <!-- Start Footer -->
+    <footer>
+      © 2025 All Right Reserved for
+      <a class="logo" href="../index.html"
+        ><img src="../image/logo.png" alt=""
+      /></a>
+    </footer>
+    <!-- End Footer -->
+    <!-- Start Sticky Header -->
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var header = document.getElementById("myHeader");
+
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.scrollY > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+    </script>
+    <!-- End Sticky Header -->
+  </body>
+</html>

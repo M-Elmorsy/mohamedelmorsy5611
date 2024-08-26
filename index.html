@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Elmorsy | Home</title>
+    <link rel="icon" type="x-icon" href="image/logo.png">
+    <!-- Main + Normalize + fontAwesome -->
+    <link rel="stylesheet" href="CSS/main.css" />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header id="myHeader">
+      <div class="container">
+        <a href="index.html"><img class="logo" src="image/logo.png" alt="" /></a>
+        <div class="links">
+          <div class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="sections">
+            <li>
+              <a href="Projects/projects.html">Projects</a>
+            </li>
+            <li>
+              <a href="#Portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#About">About</a>
+            </li>
+            <li>
+              <a href="#Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Footer -->
+    <footer>
+      © 2025 All Right Reserved for
+      <a class="logo" href="index.html"><img src="image/logo.png" alt="" /></a>
+    </footer>
+    <!-- End Footer -->
+    <!-- Start Sticky Header -->
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var header = document.getElementById("myHeader");
+
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.scrollY > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+    </script>
+    <!-- End Sticky Header -->
+  </body>
+</html>
